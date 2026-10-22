@@ -1,46 +1,61 @@
-# Astro Starter Kit: Basics
+# EmDash Portfolio Template
 
-```sh
-npm create astro@latest -- --template basics
+A visual portfolio for showcasing creative work, built with [EmDash](https://github.com/emdash-cms/emdash). Runs on any Node.js server with SQLite and local file storage. Project pages with tag filtering, case study layouts, and an RSS feed for new work.
+
+![Portfolio template work page](https://raw.githubusercontent.com/emdash-cms/emdash/main/assets/templates/portfolio/latest/work-light-desktop.jpg)
+
+## What's Included
+
+- Project grid with hover effects
+- Tag-based filtering on the work page
+- Individual project pages with galleries
+- About and contact pages
+- RSS feed for new projects
+- SEO metadata and JSON-LD
+- Dark/light mode
+
+## Pages
+
+| Page | Route |
+|---|---|
+| Homepage | `/` |
+| Work listing | `/work` |
+| Single project | `/work/:slug` |
+| About | `/about` |
+| Contact | `/contact` |
+| RSS | `/rss.xml` |
+| 404 | fallback |
+
+## Screenshots
+
+| | Desktop | Mobile |
+|---|---|---|
+| Light | ![work light desktop](https://raw.githubusercontent.com/emdash-cms/emdash/main/assets/templates/portfolio/latest/work-light-desktop.jpg) | ![work light mobile](https://raw.githubusercontent.com/emdash-cms/emdash/main/assets/templates/portfolio/latest/work-light-mobile.jpg) |
+| Dark | ![work dark desktop](https://raw.githubusercontent.com/emdash-cms/emdash/main/assets/templates/portfolio/latest/work-dark-desktop.jpg) | ![work dark mobile](https://raw.githubusercontent.com/emdash-cms/emdash/main/assets/templates/portfolio/latest/work-dark-mobile.jpg) |
+
+## Infrastructure
+
+- **Runtime:** Node.js
+- **Database:** SQLite (local file)
+- **Storage:** Local filesystem
+- **Framework:** Astro with `@astrojs/node`
+
+## Getting Started
+
+```bash
+npm install
+npm run dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Open http://localhost:4321/_emdash/admin and complete the setup wizard. EmDash runs database migrations and applies the portfolio seed during setup. The site is available at http://localhost:4321.
 
-## 🚀 Project Structure
+## Want Cloudflare Instead?
 
-Inside of your Astro project, you'll see the following folders and files:
+See the [Cloudflare variant](../portfolio-cloudflare) for a version that deploys to Cloudflare Workers with D1 and R2.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/emdash-cms/templates/tree/main/portfolio-cloudflare)
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## See Also
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- [All templates](../)
+- [EmDash documentation](https://docs.emdashcms.com/)
