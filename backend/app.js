@@ -1,0 +1,85 @@
+import 'dotenv/config';
+import apostrophe from 'apostrophe';
+
+apostrophe({
+  root: import.meta,
+  shortName: 'portfo-rizki',
+  bundles: [ '@apostrophecms/blog' ],
+  // Overridden by APOS_BASE_URL
+  baseUrl: 'http://localhost:4321',
+  // The base URL when static building the Astro frontend.
+  // Overridden by APOS_STATIC_BASE_URL
+  staticBaseUrl: 'http://static.localhost:4000',
+  // URL path prefix for non-root hosting (e.g. GitHub Pages).
+  prefix: process.env.APOS_PREFIX || '',
+  modules: {
+
+    // Apostrophe module configuration
+
+    // Note: most configuration occurs in the respective
+    // modules' directories. See lib/@apostrophecms/assets/index.js for an example.
+
+    // However any modules that are not present by default in Apostrophe must at
+    // least have a minimal configuration here to turn them on: `moduleName: {}`
+    '@apostrophecms/vite': {},
+
+    // Manages apostrophe's overall asset pipeline
+    '@apostrophecms/asset': {},
+
+    // Manage page and piece SEO metadata
+    '@apostrophecms/seo': {},
+
+    // Manage site's favicon via the Global Settings menu
+    '@apostrophecms/favicon': {},
+
+    // Manage page and piece open graph data
+    '@apostrophecms/open-graph': {},
+
+    // Generate XML sitemaps
+    '@apostrophecms/sitemap': {},
+
+    // Widgets
+    '@apostrophecms/rich-text-widget': {},
+    '@apostrophecms/image-widget': {},
+    '@apostrophecms/video-widget': {},
+    'button-widget': {},
+    'github-prs-widget': {},
+    'hero-widget': {},
+    'card-widget': {},
+    'card-title-rt-widget': {
+      extend: '@apostrophecms/rich-text-widget',
+      options: {
+        defaultData: { content: '<h3 class="card__title">My Card Title</h3>' }
+      }
+    },
+    'card-content-rt-widget': {
+      extend: '@apostrophecms/rich-text-widget',
+      options: {
+        defaultData: { content: '<p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>' }
+      }
+    },
+    'price-card-widget': {},
+
+    // A page type for ordinary pages
+    'default-page': {},
+
+    // Extends @apostrophecms/blog
+    article: {},
+
+    // Extends @apostrophecms/blog-page.
+    // Paginated index of articles, with "show pages" for individual articles
+    'article-page': {},
+
+    // Tease an article on any page
+    'article-widget': {},
+
+    // A piece type for categorizing articles
+    'article-category': {},
+
+    // Bylines for articles, optionally linked to a user
+    author: {},
+
+    // Import and export content
+    '@apostrophecms/import-export': {}
+  }
+});

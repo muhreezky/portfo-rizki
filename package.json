@@ -1,28 +1,25 @@
 {
-  "name": "portfo-rizki",
-  "version": "0.0.3",
+  "name": "astro-public-demo",
+  "version": "1.0.0",
   "private": true,
-  "type": "module",
-  "emdash": {
-    "label": "Portfolio",
-    "seed": "seed/seed.json"
-  },
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "start": "node ./dist/server/entry.mjs",
-    "typecheck": "astro check"
-  },
-  "dependencies": {
-    "@astrojs/node": "^11.1.5",
-    "@astrojs/react": "^7.0.0",
-    "astro": "^7.3.2",
-    "emdash": "^1.3.0",
-    "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently --names 'backend,frontend' --prefix-colors 'blue,green' 'npm run dev --prefix backend' 'npm run dev --prefix frontend'",
+    "install-all": "npm install",
+    "postinstall": "npm run install-frontend && npm run install-backend && echo '\\n💡 combined npm install complete'",
+    "install-frontend": "cd frontend && echo '\\n💡 running npm install in frontend/' && npm install",
+    "install-backend": "cd backend && echo '\\n💡 running npm install in backend/' && npm install",
+    "update": "npm run update-frontend && npm run update-backend && echo '\\n💡 combined npm update complete'",
+    "update-frontend": "cd frontend && echo '\\n💡 running npm update in frontend/' && npm update",
+    "update-backend": "cd backend && echo '\\n💡 running npm update in backend/' && npm update",
+    "build": "npm run build-frontend && npm run build-backend && echo '\\n💡 combined npm build complete'",
+    "build-frontend": "cd frontend && echo '\\n💡 running npm run build in frontend/' && npm run build",
+    "build-backend": " cd backend && echo '\\n💡 running npm run build in backend/' && npm run build",
+    "migrate": "cd backend && npm run migrate",
+    "serve-frontend": "cd frontend && npm run serve",
+    "serve-backend": "cd backend && npm run serve"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.10"
+    "concurrently": "^8.2.2"
   }
 }

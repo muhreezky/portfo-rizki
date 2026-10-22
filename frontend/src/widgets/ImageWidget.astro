@@ -1,0 +1,153 @@
+---
+// Use these attachment helpers for all image rendering — do not navigate
+// widget._image[0].attachment manually. They handle URL construction, srcset
+// generation, focal point, and intrinsic dimensions consistently.
+import {
+  getAttachmentUrl,
+  getAttachmentSrcset,
+  getFocalPoint,
+  getWidth,
+  getHeight,
+} from "@apostrophecms/apostrophe-astro/lib/attachment.js";
+import { slugify } from "@apostrophecms/apostrophe-astro/lib/util.js";
+import placeholderImg from "../../public/images/image-widget-placeholder.jpg";
+
+interface ImageRelationship {
+  alt?: string;
+  attachment?: { _alt?: string };
+}
+
+interface ImageWidget {
+  _image?: ImageRelationship[];
+  caption?: string;
+  className?: string;
+  dimensionAttrs?: boolean;
+  aposPlaceholder?: boolean;
+  linkTo?: string;
+  linkHref?: string;
+  linkTitle?: string;
+  linkHrefTitle?: string;
+  linkTarget?: string;
+  target?: string;
+  // Relationship fields are referenced dynamically as `_${slugify(linkTo)}`.
+  [field: string]: any;
+}
+
+interface ImageLink {
+  url?: string;
+  title?: string;
+  target?: string;
+  rel: string | null;
+}
+
+export interface Props {
+  widget?: ImageWidget;
+  options?: {
+    className?: string;
+    dimensionAttrs?: boolean;
+  };
+}
+
+const { widget = {}, options = {} } = Astro.props;
+
+const className = options.className || widget.className || "img-widget";
+const dimensionAttrs = options.dimensionAttrs ?? widget.dimensionAttrs ?? true;
+
+const imageObj = widget?._image?.[0];
+
+// Show the bundled placeholder when the widget is in placeholder mode or has
+// no image yet. This keeps the attachment helpers from ever receiving a
+// missing image, which would log a warning and yield a broken URL.
+let src = placeholderImg.src;
+let srcset = "";
+let objectPosition = "center center";
+let width: number | undefined;
+let height: number | undefined;
+
+if (imageObj && !widget?.aposPlaceholder) {
+  src = getAttachmentUrl(imageObj);
+  srcset = getAttachmentSrcset(imageObj);
+  objectPosition = getFocalPoint(imageObj);
+  // Only add width/height if they exist to prevent layout shift
+  if (dimensionAttrs) {
+    width = getWidth(imageObj);
+    height = getHeight(imageObj);
+  }
+}
+
+const aspectRatio = width && height ? `${width}/${height}` : undefined;
+
+const alt = imageObj?.alt || imageObj?.attachment?._alt || "";
+const imgStyle =
+  `object-position: ${objectPosition};${aspectRatio ? `--aspect-ratio: ${aspectRatio};` : ""}`.trim();
+
+let link: ImageLink | null = {
+  url: widget.linkHref,
+  title: widget.linkHrefTitle || widget.caption,
+  target: widget.linkTarget,
+  rel: null,
+};
+
+switch (widget.linkTo) {
+  case "none": {
+    link = null;
+    break;
+  }
+  case "_url": {
+    link.rel = widget.target === "_blank" ? "noopener noreferrer" : null;
+    break;
+  }
+  default: {
+    // slugify the linkTo value to reference the widget field.
+    // Empty options due to bad function JSDoc, to be fixed in the slug helper.
+    const name = "_" + slugify(widget.linkTo as string, {});
+    const item = widget[name]?.[0];
+    link.url = item?._url;
+    link.title = widget.linkTitle || item?.title;
+    break;
+  }
+}
+---
+
+<figure class={`${className}__wrapper`}>
+  {
+    link ? (
+      <a
+        href={link.url}
+        title={link.title}
+        target={link.target}
+        rel={link.rel}
+        class={`${className}__link`}
+      >
+        <img
+          class={className}
+          src={src}
+          alt={alt}
+          loading="lazy"
+          decoding="async"
+          srcset={srcset}
+          style={imgStyle}
+          width={width}
+          height={height}
+        />
+      </a>
+    ) : (
+      <img
+        class={className}
+        src={src}
+        alt={alt}
+        loading="lazy"
+        decoding="async"
+        srcset={srcset}
+        style={imgStyle}
+        width={width}
+        height={height}
+      />
+    )
+  }
+  {
+    widget.caption && (
+      <figcaption class={`${className}__caption`}>{widget.caption}</figcaption>
+    )
+  }
+</figure>

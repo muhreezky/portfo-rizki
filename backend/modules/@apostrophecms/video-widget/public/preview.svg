@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="197px" height="135px" viewBox="0 0 197 135" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>video copy 2</title>
+    <defs>
+        <path d="M0,0 L197,0 L197,135 L0,135 Z" id="path-1"></path>
+    </defs>
+    <g id="video-copy-2" stroke="none" fill="none" xlink:href="#path-1" fill-rule="evenodd">
+        <use fill="#FFFFFF" xlink:href="#path-1"></use>
+        <g id="Group" stroke-width="1" transform="translate(15, 15)" stroke="#587FEA">
+            <g fill="#F2F6FD" id="Rectangle-Copy-10" stroke-width="3.13826248">
+                <rect x="1.56913124" y="1.56913124" width="162.861738" height="100.861738" rx="6.27652497"></rect>
+            </g>
+            <g transform="translate(36.3279, 22.1)" stroke-width="3.9">
+                <path d="M92.6220883,15.2487257 L92.6220883,46.5926806 C92.6220883,49.9670413 88.6874206,51.8113482 86.0938984,49.6526559 L75.7142109,41.0132264 C74.805444,40.2568233 74.2799008,39.1356228 74.2799008,37.9532511 L74.2799008,23.8881551 C74.2799008,22.7057835 74.805444,21.5845829 75.7142109,20.8281799 L86.0938984,12.1887504 C88.6874206,10.030058 92.6220883,11.874365 92.6220883,15.2487257 Z" id="Rectangle-Copy-14" fill="#ADC4FE"></path>
+                <rect id="Rectangle-Copy-10" fill="#ADC4FE" x="1.95" y="1.95" width="75.8439633" height="57.2" rx="5.93125"></rect>
+                <path d="M45.5536686,23.0510089 L45.7482264,23.3585941 L55.6811828,41.7741008 C56.5790278,43.438688 55.3735139,45.4586125 53.4822244,45.4586125 L33.6163117,45.4586125 C31.7250221,45.4586125 30.5195083,43.438688 31.4173533,41.7741008 L41.3503097,23.358594 C42.2351378,21.7181399 44.4967433,21.6156115 45.5536686,23.0510089 Z" id="Triangle" fill="#F2F6FD" transform="translate(43.5493, 31.2914) rotate(90) translate(-43.5493, -31.2914)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

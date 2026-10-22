@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="410px" height="135px" viewBox="0 0 410 135" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>layout copy 2</title>
+    <defs>
+        <path d="M0,0 L410,0 L410,135 L0,135 Z" id="path-1"></path>
+        <linearGradient x1="50%" y1="144.535209%" x2="50%" y2="6.16297582e-31%" id="linearGradient-2">
+            <stop stop-color="#FAFBFF" offset="0%"></stop>
+            <stop stop-color="#B9D2FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="layout-copy-2" stroke="none" fill="none" xlink:href="#path-1" fill-rule="evenodd">
+        <use fill="#FFFFFF" xlink:href="#path-1"></use>
+        <g id="Group" stroke-width="1" transform="translate(15, 15)">
+            <rect id="Rectangle-Copy" stroke="#587FEA" stroke-width="3.13826248" fill="#F2F6FD" x="1.56913124" y="1.92341696" width="83.9474518" height="101.861738" rx="6.27652497"></rect>
+            <rect id="Rectangle-Copy-2" stroke="#587FEA" stroke-width="3.13826248" fill="#F2F6FD" x="104.983417" y="1.92341696" width="171.033166" height="101.861738" rx="6.27652497"></rect>
+            <rect id="Rectangle-Copy-4" stroke="#587FEA" stroke-width="3.14" fill="url(#linearGradient-2)" x="104.984286" y="1.92428571" width="119.86" height="101.86" rx="4.35428571"></rect>
+            <rect id="Rectangle-Copy-5" stroke="#3D58A0" stroke-width="2.17714286" fill="#F2F6FD" x="100.148571" y="-2.91142857" width="8.70857143" height="8.70857143" rx="2.17714286"></rect>
+            <rect id="Rectangle-Copy-6" stroke="#3D58A0" stroke-width="2.17714286" fill="#F2F6FD" x="220.98" y="-2.91142857" width="8.70857143" height="8.70857143" rx="2.17714286"></rect>
+            <rect id="Rectangle-Copy-8" stroke="#3D58A0" stroke-width="2.17714286" fill="#F2F6FD" x="100.148571" y="97.6428571" width="8.70857143" height="8.70857143" rx="2.17714286"></rect>
+            <rect id="Rectangle-Copy-7" stroke="#3D58A0" stroke-width="2.17714286" fill="#F2F6FD" x="220.98" y="98.6428571" width="8.70857143" height="8.70857143" rx="2.17714286"></rect>
+            <rect id="Rectangle-Copy-3" stroke="#587FEA" stroke-width="3.13826248" fill="#F2F6FD" x="295.483417" y="1.92341696" width="83.9474518" height="101.861738" rx="6.27652497"></rect>
+            <g transform="translate(193, 32)">
+                <rect id="Rectangle-Copy-9" stroke="#587FEA" stroke-width="2.64285714" fill="#FFFFFD" x="24.4533559" y="1.32142857" width="15.8571429" height="34.3571429" rx="5.28571429"></rect>
+                <g transform="translate(13.3381, 18.5291) rotate(90) translate(-13.3381, -18.5291)translate(-0.6596, 5.3079)">
+                    <path d="M27.3114622,8.36904762 L26.4324482,18.0595238 L24.6744203,20.702381 L19.8398434,25.1071429 L15.0052666,25.1071429 L7.09414081,25.1071429 L4.0175919,22.0238095 L0.0620290215,17.6190476 L0.0620290215,12.7738095 L1.82005697,11.452381 L4.0175919,10.5714286 L5.77561985,8.36904762 L5.77561985,3.96428571 L8.36904762,2.20238095 L11.452381,3.96428571 L13.6547619,0 L16.7380952,2.20238095 L18.5,2.20238095 L21.5833333,3.52380952 L23.3452381,6.16666667 L26.4285714,5.28571429 C26.4285714,5.87301587 26.7228684,6.90079365 27.3114622,8.36904762 Z" id="Path-2" fill="#FFFFFD"></path>
+                    <path d="M22.4085927,9.08958397 L22.4085927,4.95795489 C22.4085927,3.13248631 21.1579565,1.65265163 19.6152186,1.65265163 C18.0724806,1.65265163 16.8218444,3.13248631 16.8218444,4.95795489 L16.8218444,7.27166718" id="Path" stroke="#3D58A0" stroke-width="3.52380952" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M16.8218444,6.61060652 L16.8218444,3.30530326 C16.8218444,1.47983468 15.5712082,1.13686838e-13 14.0284703,1.13686838e-13 C12.4857324,1.13686838e-13 11.2350962,1.47983468 11.2350962,3.30530326 L11.2350962,6.61060652" id="Path" stroke="#3D58A0" stroke-width="3.52380952" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M11.2350962,6.44534136 L11.2350962,4.95795489 C11.2350962,3.13248631 9.98445997,1.65265163 8.44172204,1.65265163 C6.89898411,1.65265163 5.64834791,3.13248631 5.64834791,4.95795489 L5.64834791,13.221213" id="Path" stroke="#3D58A0" stroke-width="3.52380952" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M5.64834791,13.221213 C5.64834791,11.3957445 4.39771172,9.91590979 2.85497378,9.91590979 C1.31223585,9.91590979 0.0615996549,11.3957445 0.0615996549,13.221213" id="Path" stroke="#3D58A0" stroke-width="3.52380952" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M22.4085927,8.26325816 C22.4085927,6.43778957 23.6592289,4.95795489 25.2019668,4.95795489 C26.7447047,4.95795489 27.9953409,6.43778957 27.9953409,8.26325816 L27.9953409,13.221213 C27.9953409,20.5230874 22.9927962,26.4424261 16.8218444,26.4424261 L11.2350962,26.4424261 C5.06414444,26.4424261 -0.65945819,20.5018776 0.0615996549,13.221213 C0.498064363,8.81414203 5.64834791,11.3957445 5.64834791,13.221213" id="Path" stroke="#3D58A0" stroke-width="3.52380952" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+                <g transform="translate(28.4176, 7.9286)" fill="#3D58A0">
+                    <circle id="Oval" cx="1.32142857" cy="1.32142857" r="1.32142857"></circle>
+                    <circle id="Oval-Copy" cx="6.60714286" cy="1.32142857" r="1.32142857"></circle>
+                    <circle id="Oval-Copy-3" cx="1.32142857" cy="7.92857143" r="1.32142857"></circle>
+                    <circle id="Oval-Copy-2" cx="6.60714286" cy="7.92857143" r="1.32142857"></circle>
+                    <circle id="Oval-Copy-5" cx="1.32142857" cy="14.5357143" r="1.32142857"></circle>
+                    <circle id="Oval-Copy-4" cx="6.60714286" cy="14.5357143" r="1.32142857"></circle>
+                    <circle id="Oval-Copy-7" cx="1.32142857" cy="21.1428571" r="1.32142857"></circle>
+                    <circle id="Oval-Copy-6" cx="6.60714286" cy="21.1428571" r="1.32142857"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
