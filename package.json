@@ -9,11 +9,18 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "studiocms": "studiocms"
   },
   "dependencies": {
     "@astrojs/node": "^11.1.9",
+    "@effect/platform": "^0.97.2",
+    "@effect/platform-node": "^0.108.3",
+    "@studiocms/html": "^0.4.3",
+    "@studiocms/md": "^0.5.1",
     "astro": "^7.4.2",
+    "effect": "^3.22.3",
+    "mysql2": "^3.24.6",
     "studiocms": "^0.7.0"
   },
   "devDependencies": {

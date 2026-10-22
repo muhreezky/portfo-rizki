@@ -1,13 +1,13 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import node from '@astrojs/node';
-import studioCMS from 'studiocms';
+import studiocms from 'studiocms';
 
 export default defineConfig({
-  site: 'https://demo.studiocms.dev/',
+  site: import.meta.env.PUBLIC_BASE_URL || 'http://localhost:4321',
   output: 'server',
-  adapter: node({ mode: 'standalone' }),
-  integrations: [
-    studioCMS(),
-  ],
+  adapter: node({
+    mode: 'standalone',
+  }),
+  integrations: [studiocms()],
 });
