@@ -86,8 +86,8 @@ git clone <your-repo-url>
 cd astro-public-demo
 npm run install-all
 cp backend/.env.example backend/.env
-# Edit backend/.env — set APOS_DB_URI unless MongoDB is running locally, e.g.
-# APOS_DB_URI=sqlite://./data/astro-public-demo.db
+# Edit backend/.env only if you want a different database — SQLite is the
+# default (stored at backend/data/portfo-rizki.sqlite), so nothing to change.
 ```
 
 Then follow [Development](#development) below, and [create an admin user](#create-an-admin-user).
@@ -293,7 +293,7 @@ Zero-config deployment with automatic database provisioning, SSL, and asset opti
 
 Deploy the backend and frontend separately:
 
-**Backend:** Any Node.js host with MongoDB access (see [hosting docs](https://docs.apostrophecms.org/guide/hosting.html))
+**Backend:** Any Node.js host — SQLite needs no database server; set `APOS_DB_URI` to point at MongoDB or PostgreSQL instead if you prefer (see [hosting docs](https://docs.apostrophecms.org/guide/hosting.html))
 
 **Frontend:** Any SSR-capable host (Netlify, Vercel, Cloudflare Pages, etc.) with these environment variables set:
 

@@ -21,6 +21,15 @@ apostrophe({
 
     // However any modules that are not present by default in Apostrophe must at
     // least have a minimal configuration here to turn them on: `moduleName: {}`
+
+    // Database: SQLite by default, stored at data/portfo-rizki.sqlite.
+    // No database server is required. Set APOS_DB_URI (see .env) to override.
+    '@apostrophecms/db': {
+      options: {
+        defaultAdapter: 'sqlite'
+      }
+    },
+
     '@apostrophecms/vite': {},
 
     // Manages apostrophe's overall asset pipeline

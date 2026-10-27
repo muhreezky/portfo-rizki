@@ -9,10 +9,11 @@ export default {
       // Set to true for full CSS and JS minify, on staging and production servers
       // minify: true
     },
-    // If these are your db settings then you don't need to be explicit. If not
-    // you can uncomment this and get more specific.
+    // Database settings. SQLite is the default (see app.js), so you don't
+    // need to be explicit here. Uncomment `uri` to use another database.
     '@apostrophecms/db': {
-      // uri: 'mongodb://localhost:27017/@apostrophecms/sandbox'
+      // uri: 'sqlite://./data/portfo-rizki.sqlite'
+      // uri: 'mongodb://localhost:27017/portfo-rizki'
       // There is legacy support for host, port, name, user and password options,
       // but this is not necessary. They can all go in the uri option like this:
       // mongodb://user:password@host:port/dbname
